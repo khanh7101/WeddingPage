@@ -1,29 +1,20 @@
-export default function Hero() {
+export default function Navbar() {
   return (
-    <section className="relative isolate">
-      <div
-        className="absolute inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"
-        aria-hidden
-      />
-      <div className="absolute inset-0 -z-10 bg-white/60" aria-hidden />
-
-      <div className="max-w-6xl mx-auto px-4 py-24 md:py-36 text-center">
-        <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-900">
-          Kế hoạch cho ngày <span className="text-blush-700">trọn vẹn</span>
-        </h1>
-        <p className="mt-4 text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
-          Từ ý tưởng đến hiện thực – chúng tôi đồng hành để đám cưới của bạn
-          thật tinh tế, lãng mạn và mang dấu ấn riêng.
-        </p>
-        <div className="mt-8">
-          <a
-            href="#contact"
-            className="inline-flex items-center rounded-full bg-blush-600 px-6 py-3 text-white hover:bg-blush-700 transition-colors"
-          >
-            Bắt đầu liên hệ
-          </a>
-        </div>
+    <header className="sticky top-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
+      <div className="mx-auto max-w-7xl h-16 px-4 flex items-center justify-between">
+        <a href="#" className="font-display text-2xl font-bold text-white">MHS Planner</a>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" className="hover:text-white/90 text-gray-300">Giới thiệu</a>
+          <a href="#albums" className="hover:text-white/90 text-gray-300">Sản phẩm</a>
+          <a href="#videos" className="hover:text-white/90 text-gray-300">Wedding Films</a>
+          <a href="#services" className="hover:text-white/90 text-gray-300">Dịch vụ</a>
+          <a href="#testimonials" className="hover:text-white/90 text-gray-300">Lời khen</a>
+          <a href="#partners" className="hover:text-white/90 text-gray-300">Đối tác</a>
+          <a href="#press" className="hover:text-white/90 text-gray-300">Báo chí</a>
+          <a href="#contact" className="px-3 py-1.5 rounded-md border border-white/30 text-white">Liên hệ</a>
+        </nav>
+        <a href="#contact" className="md:hidden px-3 py-1.5 rounded-md border border-white/30 text-white">Liên hệ</a>
       </div>
-    </section>
-  );
+    </header>
+  )
 }

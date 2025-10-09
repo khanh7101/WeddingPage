@@ -5,4 +5,7 @@
 /* Globals */
 :root { color-scheme: light; }
 html, body, #root { height: 100%; }
-body { @apply font-sans bg-white text-gray-800; }
+body { @apply font-sans bg-white text-gray-900; }
+
+/* Cuộn mượt khi dùng anchor/scrollIntoView */
+html { scroll-behavior: smooth; }
