@@ -10,6 +10,7 @@ import TestimonialsGrid from './components/TestimonialsGrid'
 import PartnersGrid from './components/PartnersGrid'
 import PressList from './components/PressList'
 import ContactForm from './components/ContactForm'
+import ConnectFab from './components/ConnectFab'
 
 export default function App() {
   const { t } = useTranslation()
@@ -91,6 +92,7 @@ export default function App() {
           </div>
         </section>
       </main>
+      <ConnectFab /> 
 
       <footer className="py-5 text-center text-sm text-gray-500 border-t">© {new Date().getFullYear()} Wedding Planner</footer>
     </div>
