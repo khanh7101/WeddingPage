@@ -9,8 +9,7 @@ const NAV = [
   { i: 3, key: 'nav.services' },
   { i: 4, key: 'nav.testi' },
   { i: 5, key: 'nav.partners' },
-  // nếu bỏ "Báo chí" thì đừng thêm mục press ở đây
-  { i: 6, key: 'nav.contact' }, // chú ý index khớp với App.tsx
+  { i: 6, key: 'nav.contact' }, 
 ]
 
 export default function Navbar() {

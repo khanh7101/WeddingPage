@@ -5,8 +5,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        // Tiêu đề lớn (giống ảnh)
+        display: ['"Bodoni Moda"', 'serif'],
+        // Tiêu đề phụ/đoạn mô tả sang trọng
+        serif: ['"EB Garamond"', 'serif'],
+        // Body/UI
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         blush: {

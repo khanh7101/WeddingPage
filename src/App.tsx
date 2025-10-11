@@ -1,15 +1,14 @@
 import Fullpage from '@/fullpage/Fullpage'
-import Navbar from '@/components/Navbar'
-import SectionTitle from '@/components/SectionTitle'
-import AlbumsGrid from '@/components/AlbumsGrid'
-import VideosGrid from '@/components/VideosGrid'
-import ServicesColumns from '@/components/ServicesColumns'
-import TestimonialsGrid from '@/components/TestimonialsGrid'
-import PartnersGrid from '@/components/PartnersGrid'
-// import PressList from '@/components/PressList' // nếu đã bỏ thì xoá line này
-import ContactForm from '@/components/ContactForm'
+import Navbar from '@/layout/Navbar'
+import SectionTitle from '@/shared/SectionTitle'
+import { AlbumsGrid } from '@/features/albums/components'
+import { VideosGrid } from '@/features/videos'
+import { ServicesColumns } from '@/features/services'
+import { TestimonialsGrid } from '@/features/testimonials'
+import { PartnersGrid } from '@/features/partners'
+import ContactForm from '@/contact/ContactForm'
 import { useTranslation } from 'react-i18next'
-import ConnectFab from './components/ConnectFab'
+import ConnectFab from '@/contact/ConnectFab'
 
 export default function App() {
   const { t } = useTranslation()
@@ -31,7 +30,7 @@ export default function App() {
 
         {/* 1 – ALBUMS */}
         <div className="px-6 w-full">
-          <div className="max-w-6xl mx-auto w-full">
+          <div className="mx-auto w-full ">
             <SectionTitle>{t('albumsTitle')}</SectionTitle>
             <AlbumsGrid />
           </div>

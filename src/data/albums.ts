@@ -1,0 +1,55 @@
+import type { AlbumBase } from '@/types/album';
+
+export const albumsData: AlbumBase[] = [
+  {
+    id: 1,
+    title: 'In The Mood For Love',
+    couple: 'Quốc Công & Hải Anh',
+    location: 'Sai Gon',
+    cover: '/images/albums/mood-for-love/cover.jpg',
+    hero: '/images/albums/mood-for-love/hero.jpg',
+    images: [
+      '/images/albums/mood-for-love/gallery.jpg',
+      '/images/albums/mood-for-love/2.jpg',
+      '/images/albums/mood-for-love/3.jpg',
+      '/images/albums/mood-for-love/4.jpg',
+      '/images/albums/mood-for-love/5.jpg',
+      '/images/albums/mood-for-love/6.jpg',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Crimson Serenity',
+    couple: 'Zaklina & Dominic',
+    national: 'Polish - Polish',
+    concept: 'Vietnamese Charms',
+    guestNumber: 90,
+    location: 'Yen Tu',
+    cover: '/images/albums/crimson-serenity/cover.jpg',
+    hero: '/images/albums/crimson-serenity/hero.jpg',
+    images: [
+      '/images/albums/crimson-serenity/1.jpg',
+      '/images/albums/crimson-serenity/2.jpg',
+      '/images/albums/crimson-serenity/3.jpg',
+      '/images/albums/crimson-serenity/4.jpg',
+      '/images/albums/crimson-serenity/5.jpg',
+      '/images/albums/crimson-serenity/6.jpg',
+      '/images/albums/crimson-serenity/7.jpg',
+      '/images/albums/crimson-serenity/8.jpg',
+      '/images/albums/crimson-serenity/9.jpg',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Into The Sunset',
+    couple: 'Hubert & Tâm',
+    location: 'Ha Long',
+    cover: '/images/albums/into-the-sunset/cover.jpg',
+    hero: '/images/albums/into-the-sunset/hero.jpg',
+    images: [
+      '/images/albums/into-the-sunset/1.jpg',
+      '/images/albums/into-the-sunset/2.jpg',
+      '/images/albums/into-the-sunset/3.jpg',
+    ],
+  },
+];

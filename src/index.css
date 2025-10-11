@@ -9,3 +9,11 @@ body { @apply font-sans bg-white text-gray-900; }
 
 /* Cuộn mượt khi dùng anchor/scrollIntoView */
 html { scroll-behavior: smooth; }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; } /* Chrome/Safari/Edge */
+  .no-scrollbar { 
+    -ms-overflow-style: none;    /* IE, Edge Legacy */
+    scrollbar-width: none;       /* Firefox */
+  }
+}

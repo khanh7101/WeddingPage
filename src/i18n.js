@@ -13,7 +13,6 @@ const resources = {
       servicesTitle: 'Services',
       testiTitle: 'Testimonials',
       partnersTitle: 'Partners',
-      pressTitle: 'Press',
       contactTitle: 'Contact',
       contactSub: 'Leave your info. We will get back within 24–48 hours.',
     }
@@ -28,7 +27,6 @@ const resources = {
       servicesTitle: 'Dịch vụ',
       testiTitle: 'Testimonials',
       partnersTitle: 'Partners',
-      pressTitle: 'Báo chí',
       contactTitle: 'Liên hệ',
       contactSub: 'Điền thông tin, chúng tôi sẽ phản hồi trong 24–48 giờ.',
     }

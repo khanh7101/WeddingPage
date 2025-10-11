@@ -1,0 +1,7 @@
+export { default as Hero } from './Hero'
+export { default as TitleBlock } from './TitleBlock'
+export { default as InfoCard } from './InfoCard'
+export { default as ImageBlock } from './ImageBlock'
+export { default as ImageText } from './ImageText'
+export { default as Gallery3 } from './Gallery3'
+export { default as Gallery2 } from './Gallery2'
