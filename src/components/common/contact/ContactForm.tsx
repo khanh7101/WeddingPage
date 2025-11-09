@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { sendContactEmail } from '@/lib/email'
+import { sendContactEmail } from '@/utils/lib/email'
 
 type FormValues = { fullName: string; email: string; weddingDate: string; phone: string }
 export default function ContactForm({ dark = false }: { dark?: boolean }) {

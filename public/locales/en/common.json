@@ -1,0 +1,16 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "gallery": "Wedding Film",
+      "service": "Services",
+      "reviews": "Reviews",
+      "partners": "Partners",
+      "contact": "Contact Us"
+    },
+    "action": {
+      "contact": "Contact Us"
+    }
+  }
+}

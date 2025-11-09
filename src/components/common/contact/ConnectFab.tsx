@@ -1,5 +1,11 @@
 import { useState } from 'react'
-import { SOCIAL } from '@/config/social'
+
+// Thêm SOCIAL trực tiếp trong file để luôn có sẵn
+const SOCIAL = {
+  zalo: 'https://zalo.me/0123456789',
+  messenger: 'https://m.me/yourpage',
+  phone: 'tel:+84123456789'
+}
 
 function Btn({ href, label, bg, children }: any) {
   return (
@@ -15,7 +21,7 @@ function Btn({ href, label, bg, children }: any) {
   )
 }
 
-export default function ConnectFab() {
+export default function ConnectFab() {         
   const [open, setOpen] = useState(true)
 
   return (

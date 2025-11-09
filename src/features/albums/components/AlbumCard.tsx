@@ -1,5 +1,5 @@
 // src/components/AlbumCard.tsx
-import SmartCropImage from '@/shared/SmartCropImage'
+import SmartCropImage from '@/hooks/shared/SmartCropImage'
 import type { AlbumBase as AlbumCardType } from '@/types/album'
 import { CSSProperties } from 'react'
 

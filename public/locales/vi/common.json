@@ -1,0 +1,16 @@
+{
+  "header": {
+    "nav": {
+      "home": "Trang Chủ",
+      "about": "Giới Thiệu",
+      "gallery": "Album Cưới",
+      "services": "Dịch Vụ",
+      "reviews": "Đánh Giá",
+      "partners": "Đối Tác",
+      "contact": "Liên Hệ"
+    },
+    "action": {
+      "contact": "Liên Hệ"
+    }
+  }
+}
