@@ -5,5 +5,26 @@
   "about": {
     "title": "Về chúng tôi",
     "description": "Elite Wedding Planner là chuyên gia trong việc thiết kế, lập kế hoạch và tổ chức đám cưới. Elite được các cặp đôi bận rộn lựa chọn để điều hành mọi thủ tục từ việc chọn địa điểm, đối tác đến tổ chức sự kiện một cách chuyên nghiệp. Với cam kết tôn trọng ý kiến của khách hàng và tối ưu hóa chi phí, Elite cam kết mang đến cho các cặp đôi một đám cưới hoàn hảo, đáp ứng đầy đủ những mong đợi."
+  },
+  "highlights": {
+    "title": "Điểm nổi bật",
+    "tabs": {
+      "venue": "Địa điểm",
+      "decoration": "Trang trí",
+      "catering": "Ẩm thực",
+      "entertainment": "Giải trí"
+    },
+    "descriptions": {
+      "venue": "Chúng tôi lựa chọn những địa điểm đám cưới đẹp nhất và phù hợp nhất với phong cách của bạn, từ các khu vườn lãng mạn đến các sảnh tiệc sang trọng.",
+      "decoration": "Đội ngũ trang trí của chúng tôi sẽ biến không gian đám cưới của bạn thành một khung cảnh mơ ước với các thiết kế độc đáo và tinh tế.",
+      "catering": "Chúng tôi hợp tác với các nhà cung cấp ẩm thực hàng đầu để mang đến cho bạn và khách mời những trải nghiệm ẩm thực tuyệt vời nhất.",
+      "entertainment": "Từ ban nhạc     sống động đến các tiết mục biểu diễn đặc sắc, chúng tôi sẽ đảm bảo rằng đám cưới của bạn sẽ tràn ngập niềm vui và tiếng cười."
+    },
+    "img": {
+      "venue": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500",
+      "decoration": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500",
+      "catering": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500",
+      "entertainment": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500"
+    }
   }
 }

@@ -1,8 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useHeaderContext } from "@/layout/HeaderContext";
 import { useTranslation } from "react-i18next";
 import IconFacebook, { IconInstagram } from "@/components/icons/Icons";
 import i18n from "@/i18n";
+import WeddingHighlight from "@/sections/home/WeddingHighlight";
+import { AlbumCard } from "@/features/albums/components";
+import { albumsData } from "@/data";
+import AlbumModalFactory from "@/features/albums/components/AlbumModalFactory";
+import ModalShell from "@/features/albums/components/ModalShell";
 // import { homeByName, getImageUrl, customReviewByName } from "@/utils/assetMaps";
 // import Button from "@/components/Button";
 
@@ -60,90 +65,55 @@ export default function Home() {
     return () => setHero(null);
   }, [setHero, i18n.language]);
 
+  const [openId, setOpenId] = useState<number | null>(null);
+  const active = albumsData.find((a) => a.id === openId) ?? null;
+
   return (
     <div className="container">
       {/* HERO SECTION WITH HEADER OVERLAY */}
+      <div className="container-wide prose-content">
+        {/* ABOUT US */}
+        <section className=" mt-28 grid md:grid-cols-2 gap-14 items-center section">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">{t("about.title")}</h2>
+            <p className="opacity-75 mb-6">{t("about.description")}</p>
+            <button className="px-5 py-2 border border-gray-800 rounded-lg hover:bg-black hover:text-white transition">
+              {t("hero.buttonText")}
+            </button>
+          </div>
 
-      {/* ABOUT US */}
-      <section className=" mt-28 grid md:grid-cols-2 gap-14 items-center section">
-        <div>
-          <h2 className="text-3xl font-bold mb-4">{t("about.title")}</h2>
-          <p className="opacity-75 mb-6">{t("about.description")}</p>
-          <button className="px-5 py-2 border border-gray-800 rounded-lg hover:bg-black hover:text-white transition">
-            {t("hero.buttonText")}
-          </button>
-        </div>
+          <div className="">
+            <img
+              className="inset-0 w-full aspect-auto object-cover rounded-lg "
+              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500"
+            />
+          </div>
+        </section>
 
-        <div className="">
-          <img
-            className="inset-0 w-full aspect-auto object-cover rounded-lg "
-            src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=500"
-          />
-        </div>
-      </section>
+        {/* HIGHLIGHTS */}
+        <section className="section text-center">
+          <h2 className="text-3xl font-bold "> HIGHLIGHTS</h2>
+          <WeddingHighlight />
+        </section>
 
-      {/* WHY US */}
-      <section className="px-10 mt-20 text-center">
-        <h2 className="text-3xl font-bold mb-12">Why US?</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 text-sm">
-          {[
-            "Exclusive Property",
-            "Virtual Tour",
-            "0% Brokerage",
-            "Constant Communication",
-            "Online Booking",
-          ].map((item, i) => (
-            <div key={i} className="opacity-80 hover:opacity-100 transition">
-              <div className="text-3xl mb-2">🌐</div>
-              {item}
+        {/* GALLERY */}
+        <section className="section text-center">
+          <h2 className="text-3xl font-bold ">GALLERY</h2>
+          <div className="mx-auto  px-6">
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-24">
+              {albumsData.map((a) => (
+                <AlbumCard key={a.id} item={a} onViewMore={setOpenId} />
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      {/* EXCLUSIVE PROPERTIES */}
-      <section className="px-10 mt-20">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="text-3xl font-bold">Exclusive Properties</h2>
-          <a href="#" className="text-sm underline">
-            See All
-          </a>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="relative rounded-xl overflow-hidden shadow-md hover:scale-[1.02] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1529421308410-c3451f5269b1?auto=format&fit=crop&w=900&q=60"
-                className="h-56 w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30 flex items-end p-4 text-white text-lg font-semibold">
-                Passcode Big Life City
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="px-10 mt-24 mb-24">
-        <h2 className="text-3xl font-bold mb-12 text-center">
-          People love us!
-        </h2>
-        <div className="grid md:grid-cols-2 gap-10">
-          {[1, 2].map((i) => (
-            <div key={i} className="border p-6 rounded-xl shadow-sm">
-              <p className="italic opacity-75 mb-4">
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                possimus asperiores ducimus quam ex magni.”
-              </p>
-              <div className="font-semibold">John Carter</div>
-            </div>
-          ))}
-        </div>
-      </section>
+          {active && (
+            <ModalShell onClose={() => setOpenId(null)} lockBody={true}>
+              <AlbumModalFactory album={active} />
+            </ModalShell>
+          )}
+        </section>
+      </div>
     </div>
   );
 }

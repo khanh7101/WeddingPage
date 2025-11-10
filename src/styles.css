@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ====================================
+   Root variables (light & dark ready)
+   ==================================== */
+:root {
+  /* Layout */
+  --container: 1400px; /* Max readable width on desktop */
+
+  /* Colors */
+  --primary: #fff5ee;
+  --secondary: #bc8f8f;
+
+  /* --fg: #0f172a; 
+  --fg-muted: #334155; 
+  --bg: #ffffff;
+  --card: #ffffff;
+  --ring: 33 150 243;  */
+}
+
 /* Globals */
 :root { color-scheme: light; }
 html, body, #root { height: 100%; }
@@ -173,7 +191,7 @@ body {
    ==================================== */
 @layer utilities {
   .section {
-    @apply py-1 md:py-1 xl:py-4;
+    @apply py-1 md:py-1 xl:py-16;
   }
 
   .title {

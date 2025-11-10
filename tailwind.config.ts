@@ -13,18 +13,8 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
-        blush: {
-          50: "#fff1f5",
-          100: "#ffe4ec",
-          200: "#ffc9d9",
-          300: "#ff9fb9",
-          400: "#ff6d95",
-          500: "#f64c7b",
-          600: "#e03669",
-          700: "#bd2756",
-          800: "#9c234a",
-          900: "#821f3f",
-        },
+        primary: "var(--primary)",
+        second: "var(--secondary)",
       },
       container: {
         center: true,
@@ -40,6 +30,7 @@ export default {
           md: "768px", // Tablets & small laptops
           lg: "1024px", // Desktops & medium laptops
           xl: "1440px", // Large desktops
+          "2xl": "1600px", // Extra large screens
         },
       },
       fontSize: {
@@ -55,12 +46,11 @@ export default {
         "lead-lg": "clamp(1rem, 2vw, 1.25rem)", // lead desktop
       },
       spacing: {
-        spacing: {
-          section: {
-            sm: "2rem",
-            md: "3rem",
-            lg: "4rem",
-          },
+        // đặt trực tiếp keys vào spacing (không lồng)
+        section: {
+          sm: "2rem",
+          md: "3rem",
+          lg: "4rem",
         },
         container: "var(--container)",
       },
@@ -80,4 +70,3 @@ export default {
   },
   plugins: [require("@tailwindcss/typography")],
 };
-        

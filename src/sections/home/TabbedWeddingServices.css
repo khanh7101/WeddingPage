@@ -1,0 +1,47 @@
+/* Custom CSS cho Pseudo-elements và Animations */
+
+/* Mũi tên nhọn (Caret/Tooltip Pointer) */
+.tab-speech-bubble::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  width: 0;
+  height: 0;
+  /* Viền ngoài: Sử dụng màu border-gray-200 (mã hex: #e5e7eb) */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 16px solid #e5e7eb; 
+  
+  left: var(--caret-pos);
+  transform: translateX(-50%);
+  transition: left 0.3s ease-out;
+}
+
+.tab-speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: -14px; /* Cao hơn viền 2px để có border */
+  width: 0;
+  height: 0;
+  /* Màu nền: Màu trắng */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 14px solid white; 
+  
+  left: var(--caret-pos);
+  transform: translateX(-50%);
+  transition: left 0.3s ease-out;
+}
+
+/* Animation khi chuyển tab */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Áp dụng animation cho nội dung */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Bạn có thể thêm các custom classes khác ở đây nếu cần */

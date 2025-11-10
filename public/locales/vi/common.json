@@ -4,12 +4,9 @@
       "home": "Trang Chủ",
       "about": "Giới Thiệu",
       "gallery": "Album Cưới",
-      "services": "Dịch Vụ",
-      "reviews": "Đánh Giá",
-      "partners": "Đối Tác",
-      "contact": "Liên Hệ"
-    },
-    "action": {
+      "service": "Dịch Vụ",
+      "review": "Đánh Giá",
+      "partner": "Đối Tác",
       "contact": "Liên Hệ"
     }
   }

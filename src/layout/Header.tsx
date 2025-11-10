@@ -35,9 +35,9 @@ export default function Header() {
     { to: "/", key: "header.nav.home" },
     { to: "/about", key: "header.nav.about" },
     { to: "/gallery", key: "header.nav.gallery" },
-    { to: "/service", key: "header.nav.services" },
-    { to: "/review", key: "header.nav.reviews" },
-    { to: "/partner", key: "header.nav.partners" },
+    { to: "/service", key: "header.nav.service" },
+    { to: "/review", key: "header.nav.review" },
+    { to: "/partner", key: "header.nav.partner" },
   ];
 
   return (
